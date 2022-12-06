@@ -1,8 +1,9 @@
+# Simple Face Detector using OpenCV
 import cv2
 
-face_cascade = cv2.CascadeClassifier("./Files/face.xml")
+face_cascade = cv2.CascadeClassifier("face.xml")
 
-img = cv2.imread("./Files/photo.jpg")
+img = cv2.imread("image.jpg") #Add image path here
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 faces = face_cascade.detectMultiScale(gray_img, scaleFactor=1.05, minNeighbors=5)
